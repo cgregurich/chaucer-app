@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chaucer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&display=swap');
+    .container {
+      border: 1px solid black;
+      padding: 0 5px;
+      font-family: 'Dosis';
+      font-weight: 500;
+      font-size: 20px;
+    }
+    p {
+      padding: 0;
+      margin: 5px 0;
+    }
+    .container:hover {
+      background-color: #fcc;
+    }
+  </style>
+  <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <p>1 Whan that Aprill with his shoures soote</p>
+        <audio id="audio-1 "src="audio_1.mp3">
+    </div>
+    <div class="container">
+        <p>2 The droghte of March hath perced to the roote,</p>
+        <audio id="audio-2 "src="audio_2.mp3">
+    </div>
+    <div class="container">
+        <p>3 And bathed every veyne in swich licour</p>
+        <audio id="audio-3 "src="audio_3.mp3">
+    </div>
+    <div class="container">
+        <p>4 Of which vertu engendred is the flour;</p>
+        <audio id="audio-4 "src="audio_4.mp3">
+    </div>
+    <div class="container">
+        <p>5 Whan Zephirus eek with his sweete breeth</p>
+        <audio id="audio-5 "src="audio_5.mp3">
+    </div>
+    <div class="container">
+        <p>6 Inspired hath in every holt and heeth</p>
+        <audio id="audio-6 "src="audio_6.mp3">
+    </div>
+    <div class="container">
+        <p>7 The tendre croppes, and the yonge sonne</p>
+        <audio id="audio-7 "src="audio_7.mp3">
+    </div>
+    <div class="container">
+        <p>8 Hath in the Ram his half cours yronne,</p>
+        <audio id="audio-8 "src="audio_8.mp3">
+    </div>
+    <div class="container">
+        <p>9 And smale foweles maken melodye,</p>
+        <audio id="audio-9 "src="audio_9.mp3">
+    </div>
+    <div class="container">
+        <p>10 That slepen al the nyght with open ye</p>
+        <audio id="audio-10 "src="audio_10.mp3">
+    </div>
+    <div class="container">
+        <p>11 (So priketh hem Nature in hir corages),</p>
+        <audio id="audio-11 "src="audio_11.mp3">
+    </div>
+    <div class="container">
+        <p>12 Thanne longen folk to goon on pilgrimages,</p>
+        <audio id="audio-12 "src="audio_12.mp3">
+    </div>
+    <div class="container">
+        <p>13 And palmeres for to seken straunge strondes,</p>
+        <audio id="audio-13 "src="audio_13.mp3">
+    </div>
+    <div class="container">
+        <p>14 To ferne halwes, kowthe in sondry londes;</p>
+        <audio id="audio-14 "src="audio_14.mp3">
+    </div>
+    <div class="container">
+        <p>15 And specially from every shires ende</p>
+        <audio id="audio-15 "src="audio_15.mp3">
+    </div>
+    <div class="container">
+        <p>16 Of Engelond to Caunterbury they wende,</p>
+        <audio id="audio-16 "src="audio_16.mp3">
+    </div>
+    <div class="container">
+        <p>17 The hooly blisful martir for to seke,</p>
+        <audio id="audio-17 "src="audio_17.mp3">
+    </div>
+    <div class="container">
+        <p>18 That hem hath holpen whan that they were seeke</p>
+        <audio id="audio-18 "src="audio_18.mp3">
+    </div>
+  <audio controls>
+    <source src="chaucer.mp3">
+  </audio>
+  <script>
+    function getAudio(container) {
+      return container.querySelector('audio');
+    }
+    function play(container) {
+      const audio = getAudio(container);
+      audio.pause();
+      audio.currentTime = 0;
+      audio.play();
+    }
+    const containers = document.querySelectorAll('.container');
+    containers.forEach(container => {
+      // container.addEventListener('click', () => console.log(container.querySelector('audio').id));
+      container.addEventListener('click', () => play(container));
+    });
+  </script>
+</body>
+</html>
